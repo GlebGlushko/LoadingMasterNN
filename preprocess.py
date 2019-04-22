@@ -3,8 +3,11 @@ import json
 
 class Loading:
     def __init__(self, models, result):
-        self.models_ids = models
         self.result = not int(result)
+        self.models_ids = list()
+        for x in models:
+          self.models_ids.append(int(x))
+
 
     def __str__(self):
         return "Models:{0}, Result: {1}".format(self.models_ids, self.result)
